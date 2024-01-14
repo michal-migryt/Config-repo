@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zad2-deployment
+  labels:
+    app: zad2
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: zad2-app
+  template:
+    metadata:
+      labels:
+        app: zad2-app
+    spec:
+      containers:
+      - name: lab2-app
+        image: michalmigryt/lab10image
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 5
+      maxUnavailable: 2
