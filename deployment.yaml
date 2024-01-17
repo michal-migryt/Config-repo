@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lab2-app
-        image: michalmigryt/lab10image:1.1
+        image: michalmigryt/lab10image:1.2
   strategy:
     type: RollingUpdate
     rollingUpdate:
