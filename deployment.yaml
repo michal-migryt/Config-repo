@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: lab2-app
-        image: michalmigryt/lab10image:${ needs.dockerCI.outputs.version }
+        image: michalmigryt/lab10image:
   strategy:
     type: RollingUpdate
     rollingUpdate:
